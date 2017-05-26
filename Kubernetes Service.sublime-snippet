@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[
+apiVersion: v1
+kind: Service
+metadata:
+  name: ${1:Enter service name}
+  namespace: ${2:default}
+  labels:
+    name: $1
+  annotations:
+    name: $1
+spec:
+  selector:
+    name: ${3:Enter app anme}
+  type: ClusterIP # ClusterIP|LoadBalancer
+  # clusterIP: string
+  # sessionAffinity: # ClientIP
+  ports:
+    - port: ${5:int}
+      targetPort: $5
+      #protocol: TCP # TCP|UDP
+]]></content>
+  <tabTrigger>k8s:svc</tabTrigger>
+  <scope>source.yaml</scope>
+  <description>Kubernetes Service</description>
+</snippet>

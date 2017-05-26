@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ${1:Enter deployment name}
+spec:
+  replicas: ${2:Enter the number of replicas}
+  template:
+    metadata:
+      labels:
+        name: ${3:}
+    spec:
+      containers:
+      - name: ${name}
+        image: ${Enter containers image}
+]]></content>
+  <tabTrigger>k8s:dep</tabTrigger>
+  <scope>source.yaml</scope>
+  <description>Kubernetes Deployment</description>
+</snippet>

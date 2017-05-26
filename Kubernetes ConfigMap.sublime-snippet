@@ -1,0 +1,14 @@
+<snippet>
+  <content><![CDATA[
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ${1:name}
+  namespace: ${2:kube-system}
+data:
+  $3
+]]></content>
+  <tabTrigger>k8s:cm</tabTrigger>
+  <scope>source.yaml</scope>
+  <description>Kubernetes ConfigMap</description>
+</snippet>
