@@ -15,7 +15,7 @@ spec:
       - name: ${name}
         image: ${Enter containers image}
 ]]></content>
-  <tabTrigger>k8s:dep</tabTrigger>
+  <tabTrigger>k8s:deploy</tabTrigger>
   <scope>source.yaml</scope>
   <description>Kubernetes Deployment</description>
 </snippet>

@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ${1:name}
+]]></content>
+  <tabTrigger>k8s:ns</tabTrigger>
+  <scope>source.yaml</scope>
+  <description>Kubernetes Namespace</description>
+</snippet>

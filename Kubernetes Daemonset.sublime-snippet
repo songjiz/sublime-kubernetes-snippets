@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+apiVersion: v1
+kind: Daemonset
+metadata:
+  name: ${1:name}
+]]></content>
+  <tabTrigger>k8s:ds</tabTrigger>
+  <scope>source.yaml</scope>
+  <description>Kubernetes Daemonset</description>
+</snippet>

@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ${1:jobname}
+  labels:
+    ${2:sometag: somevalue}
+spec:
+  template:
+    metadata:
+      name: $1
+    spec:
+      containers:
+      - name: ${3:containerName}
+        image: ${4: image}
+        imagePullPolicy: Always
+        command:
+        - ${5:"override"
+        - "--the"
+        - "entrypoint"}
+      restartPolicy: Never
+]]></content>
+  <tabTrigger>k8s:job</tabTrigger>
+  <scope>source.yaml</scope>
+  <description>Kubernetes Job</description>
+</snippet>
