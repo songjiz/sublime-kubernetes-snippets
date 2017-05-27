@@ -3,7 +3,37 @@
 apiVersion: v1
 kind: Daemonset
 metadata:
-  name: ${1:name}
+  namespace: ${1:default}
+  name: ${2:name}
+  labels:
+    app: $2
+spec:
+  template:
+    metadata:
+      namespace: ${1:default}
+      labels:
+        app: $2
+    spec:
+      containers:
+      - name: ${2}
+        image: ${3:docker image}
+        resources:
+          limits:
+            cpu: 100m
+            memory: 200Mi
+        #env:
+        #- name: ENV_NAME
+        #  value: ENV_VALUE
+        #volumeMounts:
+        #- name: varlog
+        #  value: /var/log
+        #  readOnly: false
+
+      #volumes:
+      #- name: varlog
+      #  hostPath:
+      #  path: /var/log
+
 ]]></content>
   <tabTrigger>k8s:ds</tabTrigger>
   <scope>source.yaml</scope>
