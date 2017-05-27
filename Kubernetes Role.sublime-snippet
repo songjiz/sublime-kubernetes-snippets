@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: Role
+metadata:
+  namespace: default
+  name: ${1:roleName}
+rules:
+- apiGroups: [""]
+  resources: ["nodes"]
+  verbs: ["get", "list", "watch"]
+]]></content>
+  <tabTrigger>k8s:role</tabTrigger>
+  <scope>source.yaml</scope>
+  <description>Kubernetes Role</description>
+</snippet>
