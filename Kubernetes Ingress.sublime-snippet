@@ -1,7 +1,7 @@
 <snippet>
   <content><![CDATA[
 apiVersion: extensions/v1beta1
-Kind: Ingress
+kind: Ingress
 metadata:
   name: ${1}
   annotations:

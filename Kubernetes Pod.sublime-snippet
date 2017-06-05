@@ -1,49 +1,55 @@
 <snippet>
   <content><![CDATA[
 apiVersion: v1
-  kind: Pod
-  metadata:
-    name: ${1:Enter pod name}
-    namespace: ${2:default}
-    labels:
-      name: $1
-    annotations:
-      name: $1
-  spec:
-    containers:
-      - name: ${3:Enter container name}
-        image: ${4:Enter container image}
-        imagePullPolicy: ${5:Always} # Always|Nerver|IfNotPresent
-        # command: string
-        # workingDir: string
-        # volumeMounts:
-        #   - name: string
-        #     mountPath: string
-        #     readOnly: boolean
-        # ports:
-        #   - name: string
-        #     containerPort: Int
-        #     hostPort: Int
-        #     protocol: string # TCP|UDP
-        # env:
-        #   - name: string
-        #     value: string
-        # resources:
-        #     requests:
-        #       limits:
-        #         cpu: string
-        #         memory: string
-        # volumes:
-        #   - name: string
-        #     emptyDir: {}
-        #     hostPath:
-        #       path: string
-    dnsPolicy: Default # Default|ClusterFirst
-    restartPolicy: Always # Always|OnFailure
-    # nodeSeletor:
-    #   name: string
-    # imagePullSecrets:
-    #   name: string
+kind: Pod
+metadata:
+  name: ${1:Enter pod name}
+  namespace: ${2:default}
+  labels:
+    name: $1
+  annotations:
+    name: $1
+spec:
+  containers:
+    - name: ${3:Enter container name}
+      image: ${4:Enter container image}
+      imagePullPolicy: ${5:Always} # Always|Nerver|IfNotPresent
+      # command: string
+      # workingDir: string
+      # volumeMounts:
+      #   - name: string
+      #     mountPath: string
+      #     readOnly: boolean
+      # ports:
+      #   - name: string
+      #     containerPort: Int
+      #     hostPort: Int
+      #     protocol: string # TCP|UDP
+      # livenessProbe:
+      #   httpGet:
+      #     path: /healthz
+      #     port: 8080
+      #   initialDelaySeconds: 3
+      #   periodSeconds: 3
+      # env:
+      #   - name: string
+      #     value: string
+      # resources:
+      #     requests:
+      #       limits:
+      #         cpu: string
+      #         memory: string
+      # volumes:
+      #   - name: string
+      #     emptyDir: {}
+      #     hostPath:
+      #       path: string
+  dnsPolicy: Default # Default|ClusterFirst
+  restartPolicy: Always # Always|OnFailure
+  # nodeSeletor:
+  #   name: string
+  # imagePullSecrets:
+  #   name: string
 ]]></content>
   <tabTrigger>k8s:po</tabTrigger>
   <scope>source.yaml</scope>
