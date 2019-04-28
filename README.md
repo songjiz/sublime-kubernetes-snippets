@@ -27,5 +27,11 @@ and start typing k8s to see the list of the snippets
   <description>Kubernetes Role</description>
 </snippet>
 ````
-Using ![Sublime Kubernetes snippets](./sublime-text-snippet-usage.png)
+Using Snippets in Sublime Text
 
+![Sublime Kubernetes snippets](./sublime-text-snippet-usage.png)
+
+
+If you select k8s:po Kubernetes Pod you will get the Pod yaml
+
+![Sublime Kubernetes snippets](./sublime-text-pod-snippet.png)
