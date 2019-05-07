@@ -12,7 +12,7 @@ How to enable the Kubernetes Snippets
 
 
 
-Clone the repor and copy the files into  ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/ diretory.
+Clone the repo and copy the files into  ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/ diretory.
 ```
 $ git clone https://github.com/songjiz/sublime-kubernetes-snippets
 $ cd sublime-kubernetes-snippets
@@ -32,6 +32,6 @@ Using Snippets in Sublime Text
 ![Sublime Kubernetes snippets](./sublime-text-snippet-usage.png)
 
 
-If you select k8s:po Kubernetes Pod you will get the Pod yaml
+If you select k8s:po Kubernetes Pod, you will get the Pod yaml
 
 ![Sublime Kubernetes snippets](./sublime-text-pod-snippet.png)
