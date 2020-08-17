@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[
-apiVersion: autoscaling/v1
+apiVersion: autoscaling/v2beta2
 kind: HorizontalPodAutoscaler
 metadata:
   name: {1:name}
   namespace: {2:default}
 spec:
   scaleTargetRef:
-    apiVersion: extensions/v1beta1
+    apiVersion: apps/v1
     kind: Deployment
     name: {3:target-name}
   minReplicas: 1
@@ -16,5 +16,5 @@ spec:
 ]]></content>
   <tabTrigger>k8s:hpa</tabTrigger>
   <scope>source.yaml</scope>
-  <description>Kubernetes HorizontalPodAutoScalers</description>
+  <description>Kubernetes HorizontalPodAutoScaler</description>
 </snippet>

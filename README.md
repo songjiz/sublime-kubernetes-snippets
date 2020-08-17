@@ -1,10 +1,8 @@
 # Kubernetes Snippets for Sublime Text
 
-# 如何使用
+## Install
 
 ```bash
+cd ~/Library/ApplicationSupport/Sublime\ Text\ 3/Packages/User
 git clone https://github.com/songjiz/sublime-kubernetes-snippets
 ```
-拷贝sublime-kubernetes-snippets到Sublime Packages/User目录。
-
-![Sublime User Packages](./browse_package.png)

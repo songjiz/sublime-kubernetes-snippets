@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-apiVersion: v1
+apiVersion: apps/v1
 kind: Daemonset
 metadata:
   namespace: ${1:default}
