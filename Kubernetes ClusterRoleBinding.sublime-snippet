@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: example-clusterrolebinding
+subjects:
+- kind: User
+  name: example-user
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: example-clusterrole
+  apiGroup: rbac.authorization.k8s.io
+]]></content>
+  <tabTrigger>k8s:crb</tabTrigger>
+  <scope>source.yaml</scope>
+  <description>Kubernetes ClusterRoleBinding</description>
+</snippet>
