@@ -5,8 +5,11 @@ kind: ConfigMap
 metadata:
   name: ${1:name}
   namespace: ${2:kube-system}
+  labels:
+    name: $1
 data:
-  $3
+  ${3:dataFile}: |-
+    $4
 ]]></content>
   <tabTrigger>k8s:cm</tabTrigger>
   <scope>source.yaml</scope>

@@ -1,36 +1,22 @@
 # Kubernetes Snippets for Sublime Text
 
-# 如何使用
+Kubernetes Snipperts is a package for [Sublime Text](https://www.sublimetext.com/) which helps you to create [Kubernetes](https://kubernetes.io/) templates easy and fast.
 
-```bash
-```
-拷贝sublime-kubernetes-snippets到Sublime Packages/User目录。
+## How to enable the Kubernetes Snippets
 
-![Sublime User Packages](./browse_package.png)
-
-How to enable the Kubernetes Snippets
-
-
-
-Clone the repo and copy the files into  ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/ diretory.
+Clone the repo and copy the files into  ~/Library/Application\ Support/Sublime\ Text/Packages/User/ diretory.
 ```
 $ git clone https://github.com/songjiz/sublime-kubernetes-snippets
 $ cd sublime-kubernetes-snippets
-$ cp Kubernetes* ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
+$ cp Kubernetes* ~/Library/Application\ Support/Sublime\ Text/Packages/User/
 ```
+
+## Using Snippets in Sublime Text
 
 Create a file in Sublime Text with `yaml` extension. If you don't create the file with .yaml extension, you will not able to use snippets.
 and start typing k8s to see the list of the snippets
-```</content>
-  <tabTrigger>k8s:role</tabTrigger>
-  <scope>source.yaml</scope>
-  <description>Kubernetes Role</description>
-</snippet>
-````
-Using Snippets in Sublime Text
 
 ![Sublime Kubernetes snippets](./sublime-text-snippet-usage.png)
-
 
 If you select k8s:po Kubernetes Pod, you will get the Pod yaml
 

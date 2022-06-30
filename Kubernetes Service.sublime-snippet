@@ -7,8 +7,6 @@ metadata:
   namespace: ${2:default}
   labels:
     name: $1
-  annotations:
-    name: $1
 spec:
   selector:
     name: ${3:Enter app anme}

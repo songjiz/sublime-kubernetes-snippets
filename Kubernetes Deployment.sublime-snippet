@@ -4,16 +4,75 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ${1:Enter deployment name}
+  namespace: ${2:default}
+  labels:
+    name: $1
 spec:
-  replicas: ${2:Enter the number of replicas}
+  replicas: ${3:Enter the number of replicas}
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      {{- include "jenkins.labels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        name: ${3:}
+        name: $1
     spec:
       containers:
-      - name: ${name}
-        image: ${Enter containers image}
+      - name: $1
+        image: ${4:Enter containers image}
+        imagePullPolicy: ${5:Always} # Always|Never|IfNotPresent
+      # command: string
+      # workingDir: string
+      # volumeMounts:
+      #   - name: string
+      #     mountPath: string
+      #     readOnly: boolean
+      # ports:
+      #   - name: string
+      #     containerPort: Int
+      #     hostPort: Int
+      #     protocol: string # TCP|UDP
+      # livenessProbe:
+      #   httpGet:
+      #     path: /healthz
+      #     port: 8080
+      #   initialDelaySeconds: 3
+      #   periodSeconds: 3
+      # env:
+      #   - name: string
+      #     value: string
+      # resources:
+      #     requests:
+      #       limits:
+      #         cpu: string
+      #         memory: string
+      # volumes:
+      #   - name: string
+      #     emptyDir: {}
+      #     hostPath:
+      #       path: string
+      #initContainers:
+      # - name: string
+      # image: string
+      # imagePullPolicy: string # Always|Never|IfNotPresent
+      # resources:
+      #     requests:
+      #       limits:
+      #         cpu: string
+      #         memory: string
+      #nodeSelector:
+      # string: string
+      #tolerations:
+      #- effect: string # NoSchedule|PreferNoSchedule|NoExecute
+      #  key: string
+      #  operator: Equal # Exists|Equal
+      #  value: string
+      #securityContext:
+      # fsGroup: string
+      # runAsUser: string
+      # fsGroupChangePolicy: string # OnRootMismatch|Always
 ]]></content>
   <tabTrigger>k8s:deploy</tabTrigger>
   <scope>source.yaml</scope>

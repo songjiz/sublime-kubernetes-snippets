@@ -3,24 +3,25 @@
 apiVersion: apps/v1
 kind: Daemonset
 metadata:
-  namespace: ${1:default}
-  name: ${2:name}
+  name: ${1:name}
+  namespace: ${2:default}
   labels:
-    app: $2
+    app: $1
 spec:
   template:
     metadata:
       namespace: ${1:default}
       labels:
-        app: $2
+        app: $1
     spec:
       containers:
-      - name: ${2}
+      - name: ${1}
         image: ${3:docker image}
-        resources:
-          limits:
-            cpu: 100m
-            memory: 200Mi
+        imagePullPolicy: ${4:Always} # Always|Never|IfNotPresent
+        #resources:
+        # limits:
+        #   cpu: 100m
+        #   memory: 200Mi
         #env:
         #- name: ENV_NAME
         #  value: ENV_VALUE
