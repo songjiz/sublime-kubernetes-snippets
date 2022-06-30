@@ -4,11 +4,11 @@ Kubernetes Snipperts is a package for [Sublime Text](https://www.sublimetext.com
 
 ## How to enable the Kubernetes Snippets
 
-Clone the repo and copy the files into  ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/ diretory.
+Clone the repo and copy the files into  ~/Library/Application\ Support/Sublime\ Text/Packages/User/ diretory.
 ```
 $ git clone https://github.com/songjiz/sublime-kubernetes-snippets
 $ cd sublime-kubernetes-snippets
-$ cp Kubernetes* ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
+$ cp Kubernetes* ~/Library/Application\ Support/Sublime\ Text/Packages/User/
 ```
 
 ## Using Snippets in Sublime Text
