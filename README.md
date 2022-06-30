@@ -1,8 +1,6 @@
 # Kubernetes Snippets for Sublime Text
 
-## Sublime Packages/User
-
-![Sublime User Packages](./browse_package.png)
+Kubernetes Snipperts is a package for [Sublime Text](https://www.sublimetext.com/) which helps you to create [Kubernetes](https://kubernetes.io/) templates easy and fast.
 
 ## How to enable the Kubernetes Snippets
 
