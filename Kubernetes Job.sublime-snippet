@@ -4,22 +4,21 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: ${1:jobname}
-  labels:
-    ${2:sometag: somevalue}
+  namespace: ${2:default}
 spec:
   template:
     metadata:
       name: $1
     spec:
       containers:
-      - name: ${3:containerName}
-        image: ${4: image}
-        imagePullPolicy: Always
+      - name: ${1}
+        image: ${3:docker image}
+        imagePullPolicy: ${4:Always} # Always|Never|IfNotPresent
         command:
         - ${5:"override"
         - "--the"
         - "entrypoint"}
-      restartPolicy: Never
+      restartPolicy: ${6:Never} # Never|OnFailure
 ]]></content>
   <tabTrigger>k8s:job</tabTrigger>
   <scope>source.yaml</scope>

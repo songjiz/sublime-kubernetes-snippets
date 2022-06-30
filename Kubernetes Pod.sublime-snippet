@@ -7,47 +7,50 @@ metadata:
   namespace: ${2:default}
   labels:
     name: $1
-  annotations:
-    name: $1
 spec:
   containers:
-    - name: ${3:Enter container name}
-      image: ${4:Enter container image}
-      imagePullPolicy: ${5:Always} # Always|Nerver|IfNotPresent
-      # command: string
-      # workingDir: string
-      # volumeMounts:
-      #   - name: string
-      #     mountPath: string
-      #     readOnly: boolean
-      # ports:
-      #   - name: string
-      #     containerPort: Int
-      #     hostPort: Int
-      #     protocol: string # TCP|UDP
-      # livenessProbe:
-      #   httpGet:
-      #     path: /healthz
-      #     port: 8080
-      #   initialDelaySeconds: 3
-      #   periodSeconds: 3
-      # env:
-      #   - name: string
-      #     value: string
-      # resources:
-      #     requests:
-      #       limits:
-      #         cpu: string
-      #         memory: string
-      # volumes:
-      #   - name: string
-      #     emptyDir: {}
-      #     hostPath:
-      #       path: string
+  - name: $1
+    image: ${4:Enter containers image}
+    imagePullPolicy: ${5:Always} # Always|Never|IfNotPresent
+  # command: string
+  # workingDir: string
+  # volumeMounts:
+  #   - name: string
+  #     mountPath: string
+  #     readOnly: boolean
+  # ports:
+  #   - name: string
+  #     containerPort: Int
+  #     hostPort: Int
+  #     protocol: string # TCP|UDP
+  # livenessProbe:
+  #   httpGet:
+  #     path: /healthz
+  #     port: 8080
+  #   initialDelaySeconds: 3
+  #   periodSeconds: 3
+  # env:
+  #   - name: string
+  #     value: string
+  # resources:
+  #     requests:
+  #       limits:
+  #         cpu: string
+  #         memory: string
+  # volumes:
+  #   - name: string
+  #     emptyDir: {}
+  #     hostPath:
+  #       path: string
+  # nodeSelector:
+  #  string: string
+  # tolerations:
+  # - effect: string # NoSchedule|PreferNoSchedule|NoExecute
+  #   key: string
+  #   operator: Equal # Exists|Equal
+  #   value: string
   dnsPolicy: Default # Default|ClusterFirst
-  restartPolicy: Always # Always|OnFailure
-  # nodeSeletor:
-  #   name: string
+  restartPolicy: ${6:Never} # Never|OnFailure
   # imagePullSecrets:
   #   name: string
 ]]></content>
